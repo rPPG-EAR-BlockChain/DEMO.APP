@@ -39,11 +39,9 @@ npm install
 그 다음, 개발 서버를 실행합니다:
 
 ```bash
-npm start
+npx expo start
 
-# or
-yarn dev
 ```
 ![모바일 데모 앱](https://github.com/user-attachments/assets/3f198096-072d-4c98-bc75-9e7c1e901513)
 
-브라우저에서 http://localhost:3000 에 접속하여 실행 결과를 확인할 수 있습니다.
+Expo.go 에 접속하여 QR을 통해 실행 결과를 확인할 수 있습니다.
