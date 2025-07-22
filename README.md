@@ -1,50 +1,47 @@
-# Welcome to your Expo app 👋
+# Biometric Driver Verification Demo App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+본 프로젝트는 운전자의 생체 데이터를 활용하여 공유 모빌리티 운행 가능 여부를 판단하는 **모바일 스타일 데모 앱**입니다.  
+**신분증 인증 → 생체 정보 측정 → 운행 여부 결정**의 순서로 진행됩니다.  
+_(현재는 더미데이터로 작동하는 UI 중심의 시뮬레이션 버전입니다)_
 
-## Get started
+## Demo
 
-1. Install dependencies
+1. **홈 화면**
 
-   ```bash
-   npm install
-   ```
+   - 차량 종류 선택 (킥보드, 자동차, 자전거)
 
-2. Start the app
+2. **신분증 스캔 화면**
 
-   ```bash
-   npx expo start
-   ```
+   - 사각형 가이드에 신분증을 맞추면 자동 인식 (5초 후 자동 이동)
 
-In the output, you'll find options to open the app in a
+3. **운전자 생체 확인 화면**
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+   - 카메라 ON → 5초 뒤 측정값 표시
+   - 측정 항목: 심박수, 호흡률, 산소포화도, 눈 감김(EAR)
+   - 기준 이상 수치일 경우 **운행 불가**
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+4. **운전 화면 (운행 시작)**
+   - 스마트키: 도어 열기/잠금, 비상등
+   - 반납하기 버튼 → 4초 뒤 홈 화면으로 복귀
 
-## Get a fresh project
+---
 
-When you're ready, run:
+## 설치 및 실행 방법
+
+## Run in local
+
+먼저, 필요한 패키지를 설치합니다:
 
 ```bash
-npm run reset-project
+npm install
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+그 다음, 개발 서버를 실행합니다:
 
-## Learn more
+```bash
+npm start
+# or
+yarn dev
+```
 
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+브라우저에서 http://localhost:3000 에 접속하여 실행 결과를 확인할 수 있습니다.
